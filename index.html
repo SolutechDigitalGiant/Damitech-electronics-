@@ -1,0 +1,4628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="DAMITECH ELECTRONICS - Premium smartphones, laptops, cameras, accessories, gaming devices and electronics in Akure, Nigeria. Order conveniently through WhatsApp.">
+
+<title>DAMITECH ELECTRONICS | Premium Electronics Store</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
+            fontFamily: {
+                inter: ['Inter', 'sans-serif']
+            },
+            colors: {
+                brand: {
+                    navy: '#071426',
+                    red: '#e94b4b',
+                    coral: '#f05a5a',
+                    light: '#f7f8fa'
+                }
+            }
+        }
+    }
+}
+</script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: #111827;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container-main {
+    width: min(1200px, calc(100% - 30px));
+    margin: auto;
+}
+
+/* LOGO */
+.brand-logo {
+    display: inline-flex;
+    flex-direction: column;
+    line-height: .85;
+    text-decoration: none;
+}
+
+.brand-logo .damitech {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    color: #071426;
+}
+
+.brand-logo .electronics {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #e94b4b;
+    margin-top: 5px;
+}
+
+/* TOP BAR */
+.topbar {
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.topbar a {
+    transition: .25s ease;
+}
+
+.topbar a:hover {
+    color: #e94b4b;
+}
+
+/* HEADER */
+.main-header {
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.search-wrapper {
+    border: 1px solid #e5e7eb;
+    height: 46px;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    background: #fff;
+}
+
+.search-wrapper select {
+    border: 0;
+    border-right: 1px solid #eee;
+    outline: none;
+    padding: 0 12px;
+    color: #6b7280;
+    font-size: 12px;
+    background: #fafafa;
+}
+
+.search-wrapper input {
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 0 15px;
+    font-size: 13px;
+}
+
+.search-button {
+    width: 52px;
+    border: 0;
+    background: #e94b4b;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* NAVIGATION */
+.navbar {
+    background: #071426;
+    color: #fff;
+}
+
+.nav-link {
+    position: relative;
+    padding: 16px 13px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ff7373;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 13px;
+    right: 13px;
+    bottom: 7px;
+    height: 2px;
+    background: #e94b4b;
+}
+
+/* HERO */
+.hero-section {
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    margin: 22px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #eef1f4;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.02);
+    transition: opacity .7s ease, transform .9s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.hero-content {
+    position: absolute;
+    left: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 43%;
+    z-index: 4;
+}
+
+.hero-small {
+    color: #e94b4b;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-size: clamp(38px, 5vw, 66px);
+    line-height: .98;
+    font-weight: 900;
+    letter-spacing: -3px;
+    color: #071426;
+    margin: 0;
+}
+
+.hero-title span {
+    color: #e94b4b;
+}
+
+.hero-description {
+    color: #5b6472;
+    line-height: 1.7;
+    font-size: 14px;
+    max-width: 440px;
+    margin: 22px 0;
+}
+
+.hero-image-area {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 57%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-area::before {
+    content: "";
+    position: absolute;
+    width: 470px;
+    height: 470px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.65);
+}
+
+.hero-product-image {
+    position: relative;
+    z-index: 2;
+    width: min(82%, 550px);
+    max-height: 510px;
+    object-fit: contain;
+    filter: drop-shadow(0 25px 25px rgba(0,0,0,.18));
+    animation: heroFloat 4s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+    0%,100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: #e94b4b;
+    color: #fff;
+    border: 0;
+    padding: 13px 22px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn-primary:hover {
+    background: #c93636;
+    transform: translateY(-2px);
+}
+
+.btn-dark {
+    background: #071426;
+    color: white;
+    border: 0;
+    padding: 13px 22px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn-dark:hover {
+    background: #152944;
+    transform: translateY(-2px);
+}
+
+.hero-arrow {
+    position: absolute;
+    z-index: 8;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,.08);
+    background: rgba(255,255,255,.85);
+    cursor: pointer;
+    transition: .25s;
+}
+
+.hero-arrow:hover {
+    background: #e94b4b;
+    color: #fff;
+}
+
+.hero-prev {
+    left: 18px;
+}
+
+.hero-next {
+    right: 18px;
+}
+
+.hero-dots {
+    position: absolute;
+    bottom: 24px;
+    left: 7%;
+    display: flex;
+    gap: 7px;
+    z-index: 8;
+}
+
+.hero-dot {
+    width: 28px;
+    height: 4px;
+    border: 0;
+    background: #c8cdd3;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.hero-dot.active {
+    background: #e94b4b;
+}
+
+/* CATEGORY SIDEBAR */
+.category-panel {
+    border: 1px solid #e5e7eb;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.category-heading {
+    background: #e94b4b;
+    color: white;
+    padding: 16px 18px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 17px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #4b5563;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.category-item:hover {
+    background: #fafafa;
+    color: #e94b4b;
+    padding-left: 22px;
+}
+
+/* SECTION */
+.section-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    position: relative;
+    background: #e94b4b;
+    color: white;
+    padding: 13px 26px;
+    font-size: 13px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    right: -13px;
+    top: 0;
+    border-top: 20px solid #e94b4b;
+    border-bottom: 20px solid #e94b4b;
+    border-right: 13px solid transparent;
+}
+
+/* FILTER */
+.filter-tabs {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    color: #6b7280;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #071426;
+    color: #fff;
+    border-color: #071426;
+}
+
+/* PRODUCTS */
+.product-card {
+    background: white;
+    border: 1px solid #e7e9ed;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    transition: .3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(7,20,38,.10);
+}
+
+.product-image-box {
+    height: 205px;
+    background: #f7f8fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    transition: .45s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.08);
+}
+
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e94b4b;
+    color: white;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 6px 8px;
+    border-radius: 2px;
+}
+
+.wishlist-btn {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    cursor: pointer;
+    color: #777;
+    z-index: 3;
+}
+
+.wishlist-btn.active {
+    color: #e94b4b;
+}
+
+.product-info {
+    padding: 14px;
+}
+
+.product-category {
+    color: #9ca3af;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.product-name {
+    margin: 6px 0;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+    min-height: 37px;
+}
+
+.rating {
+    color: #f59e0b;
+    font-size: 11px;
+}
+
+.review-count {
+    color: #9ca3af;
+    font-size: 10px;
+}
+
+.price {
+    color: #e94b4b;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.old-price {
+    color: #9ca3af;
+    text-decoration: line-through;
+    font-size: 10px;
+}
+
+.product-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    margin-top: 12px;
+}
+
+.action-btn {
+    border: 0;
+    padding: 9px 5px;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.quick-btn {
+    background: #f1f3f5;
+    color: #071426;
+}
+
+.quick-btn:hover {
+    background: #e4e7eb;
+}
+
+.cart-btn {
+    background: #071426;
+    color: #fff;
+}
+
+.cart-btn:hover {
+    background: #e94b4b;
+}
+
+.whatsapp-btn {
+    grid-column: 1 / -1;
+    background: #16a34a;
+    color: #fff;
+}
+
+.whatsapp-btn:hover {
+    background: #12813b;
+}
+
+/* PROMO */
+.promo-banner {
+    min-height: 210px;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+    background: #eef1f4;
+}
+
+.promo-banner img {
+    position: absolute;
+    right: 0;
+    width: 58%;
+    height: 100%;
+    object-fit: contain;
+    transition: .4s;
+}
+
+.promo-banner:hover img {
+    transform: scale(1.06);
+}
+
+.promo-content {
+    position: relative;
+    z-index: 2;
+    padding: 35px;
+    width: 60%;
+}
+
+.promo-content h3 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #071426;
+}
+
+.promo-content p {
+    color: #6b7280;
+    font-size: 12px;
+    margin: 8px 0 15px;
+}
+
+/* BESTSELLER */
+.bestseller-feature {
+    background: #f5f6f8;
+    border-radius: 7px;
+    min-height: 450px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bestseller-feature img {
+    height: 280px;
+    width: 100%;
+    object-fit: contain;
+    transition: .4s;
+}
+
+.bestseller-feature:hover img {
+    transform: scale(1.05);
+}
+
+/* DEAL */
+.deal-section {
+    background: #071426;
+    border-radius: 7px;
+    color: white;
+    padding: 25px;
+}
+
+.deal-progress {
+    height: 6px;
+    background: #394657;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.deal-progress span {
+    display: block;
+    height: 100%;
+    background: #e94b4b;
+}
+
+/* SERVICES */
+.service-card {
+    padding: 25px 20px;
+    background: white;
+    border: 1px solid #e8eaed;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.07);
+}
+
+.service-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff0f0;
+    color: #e94b4b;
+    margin-bottom: 15px;
+}
+
+/* TRUST */
+.trust-section {
+    background: #f7f8fa;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+    background: #071426;
+    color: #c5ccd5;
+}
+
+.footer-heading {
+    color: white;
+    font-weight: 800;
+    font-size: 13px;
+    margin-bottom: 17px;
+}
+
+.footer-link {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #9da8b6;
+    transition: .2s;
+}
+
+.footer-link:hover {
+    color: #fff;
+    transform: translateX(3px);
+}
+
+/* CART DRAWER */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-drawer {
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: min(420px, 92vw);
+    background: white;
+    transform: translateX(100%);
+    transition: .35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-drawer.open {
+    transform: translateX(0);
+}
+
+.cart-body {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    gap: 10px;
+    padding: 13px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    background: #f7f7f7;
+    border-radius: 4px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.quantity-control button {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* MODALS */
+.modal-wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    background: rgba(0,0,0,.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s;
+}
+
+.modal-wrapper.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    background: white;
+    width: min(900px, 100%);
+    max-height: 92vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    transform: scale(.95);
+    transition: .25s;
+}
+
+.modal-wrapper.show .modal-box {
+    transform: scale(1);
+}
+
+/* RECEIPT */
+.receipt-paper {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+}
+
+.receipt-logo {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.receipt-logo .brand-logo {
+    align-items: center;
+}
+
+.receipt-divider {
+    border-top: 1px dashed #999;
+    margin: 18px 0;
+}
+
+.receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.receipt-table th,
+.receipt-table td {
+    padding: 8px 4px;
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+}
+
+.receipt-table th {
+    text-align: left;
+}
+
+.receipt-table td:last-child,
+.receipt-table th:last-child {
+    text-align: right;
+}
+
+/* TOAST */
+.toast {
+    position: fixed;
+    right: 20px;
+    bottom: 85px;
+    background: #071426;
+    color: white;
+    padding: 13px 17px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 200;
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* WHATSAPP */
+.floating-whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 80;
+    background: #16a34a;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 800;
+    box-shadow: 0 10px 25px rgba(0,0,0,.18);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-4px);
+    background: #12813b;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    position: fixed;
+    z-index: 120;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: min(310px, 85vw);
+    background: #071426;
+    color: white;
+    transform: translateX(-100%);
+    transition: .3s;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 15px 22px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    font-size: 13px;
+}
+
+/* REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* EMPTY */
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: #9ca3af;
+}
+
+/* MOBILE */
+@media(max-width: 900px) {
+    .hero-section {
+        height: 520px;
+    }
+
+    .hero-content {
+        width: 50%;
+        left: 5%;
+    }
+
+    .hero-title {
+        font-size: 43px;
+    }
+
+    .hero-image-area {
+        width: 53%;
+    }
+
+    .hero-image-area::before {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media(max-width: 767px) {
+
+    .container-main {
+        width: min(100% - 20px, 1200px);
+    }
+
+    .topbar {
+        display: none;
+    }
+
+    .desktop-search {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .hero-section {
+        width: calc(100% - 20px);
+        height: 600px;
+        margin: 12px auto;
+    }
+
+    .hero-content {
+        left: 6%;
+        top: 48px;
+        transform: none;
+        width: 88%;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 38px;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        margin: 13px auto;
+        font-size: 12px;
+        max-width: 330px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image-area {
+        top: 245px;
+        width: 100%;
+        height: 330px;
+    }
+
+    .hero-product-image {
+        width: 72%;
+        height: 300px;
+    }
+
+    .hero-image-area::before {
+        width: 290px;
+        height: 290px;
+    }
+
+    .hero-arrow {
+        top: 58%;
+        width: 36px;
+        height: 36px;
+    }
+
+    .hero-prev {
+        left: 10px;
+    }
+
+    .hero-next {
+        right: 10px;
+    }
+
+    .hero-dots {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15px;
+    }
+
+    .section-title-wrap {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .section-title {
+        padding: 11px 18px;
+    }
+
+    .filter-tabs {
+        width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+    }
+
+    .filter-btn {
+        white-space: nowrap;
+    }
+
+    .product-image-box {
+        height: 150px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-name {
+        font-size: 11px;
+    }
+
+    .price {
+        font-size: 13px;
+    }
+
+    .old-price {
+        display: block;
+    }
+
+    .product-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .whatsapp-btn {
+        grid-column: auto;
+    }
+
+    .action-btn {
+        padding: 8px 3px;
+    }
+
+    .promo-content {
+        padding: 25px 20px;
+        width: 75%;
+    }
+
+    .promo-content h3 {
+        font-size: 20px;
+    }
+
+    .promo-banner img {
+        width: 52%;
+    }
+
+    .floating-whatsapp {
+        width: 49px;
+        height: 49px;
+        padding: 0;
+        border-radius: 50%;
+        justify-content: center;
+    }
+
+    .floating-whatsapp span {
+        display: none;
+    }
+
+    .receipt-paper {
+        padding: 20px 12px;
+    }
+}
+
+@media(max-width: 380px) {
+    .hero-section {
+        height: 570px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-image-area {
+        top: 235px;
+    }
+
+    .product-image-box {
+        height: 135px;
+    }
+}
+
+/* PRINT */
+@media print {
+
+    body * {
+        visibility: hidden !important;
+    }
+
+    #receiptModal,
+    #receiptModal * {
+        visibility: visible !important;
+    }
+
+    #receiptModal {
+        position: absolute !important;
+        inset: 0 !important;
+        background: white !important;
+        padding: 0 !important;
+    }
+
+    .receipt-paper {
+        max-width: none;
+        width: 100%;
+        padding: 10mm;
+        margin: 0;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    @page {
+        margin: 8mm;
+        size: A4;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP UTILITY BAR -->
+<div class="topbar">
+    <div class="container-main h-9 flex items-center justify-between">
+
+        <div class="flex items-center gap-4">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="YouTube">▶</a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-5">
+            <a href="#about">ABOUT US</a>
+            <a href="#contact">STORE LOCATION</a>
+            <a href="#newsletter">NEWSLETTER</a>
+            <a href="#">REGISTER / SIGN IN</a>
+        </div>
+
+        <div>
+            ₦ NGN &nbsp; | &nbsp; ENGLISH 🇳🇬
+        </div>
+    </div>
+</div>
+
+
+<!-- MAIN HEADER -->
+<header class="main-header">
+
+    <div class="container-main py-4">
+
+        <div class="flex items-center justify-between gap-5">
+
+            <!-- MOBILE MENU -->
+            <button
+                id="mobileMenuBtn"
+                class="md:hidden w-10 h-10 border rounded flex items-center justify-center"
+                aria-label="Open menu">
+                ☰
+            </button>
+
+            <!-- CART -->
+            <button
+                id="cartOpenBtn"
+                class="flex items-center gap-2 text-left relative"
+                aria-label="Open cart">
+
+                <div class="relative">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="1.7">
+                        <circle cx="9" cy="20" r="1"/>
+                        <circle cx="19" cy="20" r="1"/>
+                        <path d="M3 4h2l2.2 11h11.6L21 7H6"/>
+                    </svg>
+
+                    <span id="cartCount"
+                          class="absolute -top-2 -right-2 bg-brand-red text-white rounded-full w-5 h-5 text-[9px] flex items-center justify-center">
+                        0
+                    </span>
+                </div>
+
+                <div class="hidden sm:block">
+                    <div class="text-[10px] text-gray-400">$0.00 CART</div>
+                    <div class="font-bold text-xs">SHOPPING CART</div>
+                </div>
+            </button>
+
+
+            <!-- SUPPORT -->
+            <div class="hidden lg:flex items-center gap-3">
+                <svg width="27" height="27" viewBox="0 0 24 24" fill="none"
+                     stroke="#e94b4b" stroke-width="1.7">
+                    <path d="M22 16.9v3a2 2 0 0 1-2.18 2
+                    19.8 19.8 0 0 1-8.63-3.07
+                    19.5 19.5 0 0 1-6-6
+                    A19.8 19.8 0 0 1 2.12 4.18
+                    2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72
+                    12.8 12.8 0 0 0 .7 2.81
+                    2 2 0 0 1-.45 2.11L8.09 9.91
+                    a16 16 0 0 0 6 6l1.27-1.27
+                    a2 2 0 0 1 2.11-.45
+                    12.8 12.8 0 0 0 2.81.7
+                    A2 2 0 0 1 22 16.9z"/>
+                </svg>
+
+                <div>
+                    <div class="text-[9px] text-gray-400 uppercase">
+                        Call Us Now
+                    </div>
+                    <strong class="text-xs">09134228406</strong>
+                </div>
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="desktop-search flex-1 max-w-xl">
+                <div class="search-wrapper">
+
+                    <select id="searchCategory">
+                        <option value="all">All Categories</option>
+                        <option value="Smartphones">Smartphones</option>
+                        <option value="Laptops">Laptops</option>
+                        <option value="Cameras">Cameras</option>
+                        <option value="TV & Audio">TV & Audio</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Smartwatches">Smartwatches</option>
+                    </select>
+
+                    <input
+                        id="searchInput"
+                        type="search"
+                        placeholder="Search products..."
+                        aria-label="Search products">
+
+                    <button id="searchBtn" class="search-button" aria-label="Search">
+                        <svg width="18" height="18" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="7"/>
+                            <path d="m20 20-4-4"/>
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- LOGO -->
+            <a href="#" class="brand-logo">
+                <span class="damitech">DAMITECH</span>
+                <span class="electronics">ELECTRONICS</span>
+            </a>
+
+        </div>
+
+        <!-- MOBILE SEARCH -->
+        <div class="md:hidden mt-4">
+            <div class="search-wrapper">
+                <input
+                    id="mobileSearchInput"
+                    type="search"
+                    placeholder="Search electronics..."
+                    aria-label="Mobile search">
+
+                <button id="mobileSearchBtn" class="search-button">
+                    <svg width="18" height="18" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="7"/>
+                        <path d="m20 20-4-4"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="container-main flex items-center justify-center">
+
+        <a href="#" class="nav-link active">HOME</a>
+        <a href="#shop" class="nav-link">SHOP</a>
+        <a href="#categories" class="nav-link">CATEGORIES</a>
+        <a href="#new" class="nav-link">NEW ARRIVALS</a>
+        <a href="#bestsellers" class="nav-link">BEST SELLERS</a>
+        <a href="#deals" class="nav-link">DEALS</a>
+        <a href="#newsletter" class="nav-link">BLOG</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+
+    </div>
+</nav>
+
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+
+    <div class="p-5 border-b border-white/10 flex justify-between items-center">
+        <div class="brand-logo">
+            <span class="damitech" style="color:white;">DAMITECH</span>
+            <span class="electronics">ELECTRONICS</span>
+        </div>
+
+        <button id="mobileMenuClose" class="text-2xl">×</button>
+    </div>
+
+    <a href="#">HOME</a>
+    <a href="#shop">SHOP</a>
+    <a href="#categories">CATEGORIES</a>
+    <a href="#new">NEW ARRIVALS</a>
+    <a href="#bestsellers">BEST SELLERS</a>
+    <a href="#deals">DEALS</a>
+    <a href="#newsletter">BLOG</a>
+    <a href="#contact">CONTACT</a>
+
+</div>
+
+
+<!-- HERO -->
+<section class="hero-section" id="home">
+
+    <!-- SLIDE 1 -->
+    <div class="hero-slide active">
+
+        <div class="hero-content">
+
+            <div class="hero-small">NEW GENERATION TECHNOLOGY</div>
+
+            <h1 class="hero-title">
+                PREMIUM<br>
+                <span>SMARTPHONES</span>
+                FOR YOU
+            </h1>
+
+            <p class="hero-description">
+                Discover genuine smartphones, powerful devices and
+                premium mobile accessories at competitive Nigerian prices.
+            </p>
+
+            <div class="hero-buttons">
+                <button
+                    class="btn-primary"
+                    onclick="filterProducts('Smartphones'); scrollToShop();">
+                    SHOP NOW
+                </button>
+
+                <button
+                    class="btn-dark"
+                    onclick="openWhatsAppGeneral()">
+                    ORDER VIA WHATSAPP
+                </button>
+            </div>
+
+        </div>
+
+        <div class="hero-image-area">
+            <img
+                class="hero-product-image"
+                src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=1000&q=90"
+                alt="Premium smartphone"
+                onerror="imageFallback(this)">
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE 2 -->
+    <div class="hero-slide">
+
+        <div class="hero-content">
+
+            <div class="hero-small">BUSINESS • SCHOOL • CREATIVITY</div>
+
+            <h1 class="hero-title">
+                POWERFUL<br>
+                <span>LAPTOPS</span><br>
+                FOR EVERYONE
+            </h1>
+
+            <p class="hero-description">
+                Work, study, design and create with reliable laptops
+                selected for modern Nigerian users.
+            </p>
+
+            <div class="hero-buttons">
+                <button
+                    class="btn-primary"
+                    onclick="filterProducts('Laptops'); scrollToShop();">
+                    SHOP LAPTOPS
+                </button>
+
+                <button
+                    class="btn-dark"
+                    onclick="openWhatsAppGeneral()">
+                    ORDER VIA WHATSAPP
+                </button>
+            </div>
+
+        </div>
+
+        <div class="hero-image-area">
+            <img
+                class="hero-product-image"
+                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1000&q=90"
+                alt="Premium laptop"
+                onerror="imageFallback(this)">
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE 3 -->
+    <div class="hero-slide">
+
+        <div class="hero-content">
+
+            <div class="hero-small">CAPTURE • CREATE • CONNECT</div>
+
+            <h1 class="hero-title">
+                SMART<br>
+                <span>ELECTRONICS</span><br>
+                FOR MODERN LIFE
+            </h1>
+
+            <p class="hero-description">
+                Upgrade your everyday lifestyle with cameras,
+                headphones, smartwatches, gaming devices and accessories.
+            </p>
+
+            <div class="hero-buttons">
+                <button
+                    class="btn-primary"
+                    onclick="filterProducts('Accessories'); scrollToShop();">
+                    EXPLORE PRODUCTS
+                </button>
+
+                <button
+                    class="btn-dark"
+                    onclick="openWhatsAppGeneral()">
+                    ORDER VIA WHATSAPP
+                </button>
+            </div>
+
+        </div>
+
+        <div class="hero-image-area">
+            <img
+                class="hero-product-image"
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=90"
+                alt="Premium electronics"
+                onerror="imageFallback(this)">
+        </div>
+
+    </div>
+
+
+    <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous slide">
+        ‹
+    </button>
+
+    <button class="hero-arrow hero-next" id="heroNext" aria-label="Next slide">
+        ›
+    </button>
+
+    <div class="hero-dots">
+        <button class="hero-dot active"></button>
+        <button class="hero-dot"></button>
+        <button class="hero-dot"></button>
+    </div>
+
+</section>
+
+
+<!-- CATEGORY + FEATURED -->
+<section class="container-main mb-14" id="categories">
+
+    <div class="grid lg:grid-cols-4 gap-5">
+
+        <!-- CATEGORY SIDEBAR -->
+        <aside class="lg:col-span-1 category-panel">
+
+            <div class="category-heading flex items-center justify-between">
+                <span>CATEGORIES</span>
+                <span>☰</span>
+            </div>
+
+            <div class="category-item" onclick="filterProducts('Smartphones')">
+                <span>SMARTPHONES</span><span>›</span>
+            </div>
+
+            <div class="category-item" onclick="filterProducts('Laptops')">
+                <span>LAPTOPS & COMPUTERS</span><span>›</span>
+            </div>
+
+            <div class="category-item" onclick="filterProducts('Cameras')">
+                <span>CAMERAS</span><span>›</span>
+            </div>
+
+            <div class="category-item" onclick="filterProducts('TV & Audio')">
+                <span>TV & AUDIO</span><span>›</span>
+            </div>
+
+            <div class="category-item" onclick="filterProducts('Accessories')">
+                <span>ACCESSORIES</span><span>›</span>
+            </div>
+
+            <div class="category-item" onclick="filterProducts('Smartwatches')">
+                <span>SMARTWATCHES</span><span>›</span>
+            </div>
+
+            <div class="category-item" onclick="filterProducts('Gaming')">
+                <span>GAMING & CONSOLES</span><span>›</span>
+            </div>
+
+            <div class="category-item" onclick="filterProducts('TV & Audio')">
+                <span>HEADPHONES & AUDIO</span><span>›</span>
+            </div>
+
+            <div class="category-item" onclick="filterProducts('Accessories')">
+                <span>POWER BANKS</span><span>›</span>
+            </div>
+
+            <div class="category-item" onclick="filterProducts('all')">
+                <span>ALL CATEGORIES</span><span>›</span>
+            </div>
+
+        </aside>
+
+
+        <!-- FEATURED -->
+        <div class="lg:col-span-3" id="shop">
+
+            <div class="section-title-wrap">
+                <h2 class="section-title">FEATURED PRODUCTS</h2>
+            </div>
+
+            <div class="filter-tabs mb-5">
+
+                <button class="filter-btn active" data-category="all">
+                    ALL
+                </button>
+
+                <button class="filter-btn" data-category="Smartphones">
+                    SMARTPHONES
+                </button>
+
+                <button class="filter-btn" data-category="Laptops">
+                    LAPTOPS
+                </button>
+
+                <button class="filter-btn" data-category="Cameras">
+                    CAMERAS
+                </button>
+
+                <button class="filter-btn" data-category="TV & Audio">
+                    TV & AUDIO
+                </button>
+
+                <button class="filter-btn" data-category="Accessories">
+                    ACCESSORIES
+                </button>
+
+                <button class="filter-btn" data-category="Gaming">
+                    GAMING
+                </button>
+
+                <button class="filter-btn" data-category="Smartwatches">
+                    SMARTWATCHES
+                </button>
+
+            </div>
+
+            <div
+                id="productGrid"
+                class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PROMOTIONAL BANNERS -->
+<section class="container-main mb-14">
+
+    <div class="grid md:grid-cols-2 gap-5">
+
+        <div class="promo-banner reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=85"
+                alt="Professional camera"
+                onerror="imageFallback(this)">
+
+            <div class="promo-content">
+
+                <div class="text-[10px] uppercase tracking-widest text-gray-400">
+                    Inspiration
+                </div>
+
+                <h3>PREMIUM CAMERAS</h3>
+
+                <p>
+                    Capture every important moment with quality cameras.
+                </p>
+
+                <button
+                    class="btn-primary"
+                    onclick="filterProducts('Cameras'); scrollToShop();">
+                    SHOP CAMERAS
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="promo-banner reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=900&q=85"
+                alt="Modern laptop"
+                onerror="imageFallback(this)">
+
+            <div class="promo-content">
+
+                <div class="text-[10px] uppercase tracking-widest text-gray-400">
+                    New Series
+                </div>
+
+                <h3>SMART LAPTOPS</h3>
+
+                <p>
+                    Powerful devices for work, school and business.
+                </p>
+
+                <button
+                    class="btn-primary"
+                    onclick="filterProducts('Laptops'); scrollToShop();">
+                    SHOP LAPTOPS
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- BESTSELLERS -->
+<section class="container-main mb-14" id="bestsellers">
+
+    <div class="section-title-wrap">
+        <h2 class="section-title">BESTSELLER PRODUCTS</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-5">
+
+        <div
+            id="bestsellerGrid"
+            class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        </div>
+
+        <div class="bestseller-feature reveal">
+
+            <div class="text-[10px] uppercase tracking-widest text-gray-400">
+                Featured Bestseller
+            </div>
+
+            <h3 class="text-2xl font-black mt-2">
+                Premium Business Laptop
+            </h3>
+
+            <p class="text-xs text-gray-500 mt-2">
+                High-performance laptop designed for business,
+                programming, school and creative work.
+            </p>
+
+            <img
+                src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=900&q=90"
+                alt="Premium business laptop"
+                onerror="imageFallback(this)">
+
+            <div class="flex items-center gap-2 mb-2">
+                <span class="rating">★★★★★</span>
+                <span class="review-count">(38 reviews)</span>
+            </div>
+
+            <div class="price mb-4">₦850,000</div>
+
+            <button
+                class="btn-primary"
+                onclick="openWhatsAppProduct('Premium Business Laptop', 850000)">
+                ORDER VIA WHATSAPP
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FLASH DEALS -->
+<section class="container-main mb-14" id="deals">
+
+    <div class="deal-section reveal">
+
+        <div class="flex flex-col md:flex-row justify-between gap-5 mb-7">
+
+            <div>
+                <div class="text-red-400 text-[10px] font-bold tracking-widest">
+                    LIMITED TIME OFFER
+                </div>
+
+                <h2 class="text-2xl md:text-3xl font-black mt-1">
+                    TODAY'S DEALS
+                </h2>
+            </div>
+
+            <div class="text-right">
+
+                <div class="text-[10px] text-gray-400">
+                    DEAL ENDS IN
+                </div>
+
+                <div
+                    id="countdown"
+                    class="text-2xl font-black tracking-wider">
+                    02 : 14 : 36 : 22
+                </div>
+
+            </div>
+
+        </div>
+
+        <div
+            id="dealGrid"
+            class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="container-main mb-14">
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <div class="service-card reveal">
+            <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="m12 3 8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                </svg>
+            </div>
+            <h3 class="font-bold text-sm">GENUINE PRODUCTS</h3>
+            <p class="text-[11px] text-gray-500 mt-2">
+                Quality electronics you can trust.
+            </p>
+        </div>
+
+        <div class="service-card reveal">
+            <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M3 12h18"/>
+                    <path d="M13 5l7 7-7 7"/>
+                </svg>
+            </div>
+            <h3 class="font-bold text-sm">FAST DELIVERY</h3>
+            <p class="text-[11px] text-gray-500 mt-2">
+                Delivery options available.
+            </p>
+        </div>
+
+        <div class="service-card reveal">
+            <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="3" y="5" width="18" height="14" rx="2"/>
+                    <path d="M7 9h10M7 13h6"/>
+                </svg>
+            </div>
+            <h3 class="font-bold text-sm">SECURE ORDERING</h3>
+            <p class="text-[11px] text-gray-500 mt-2">
+                Simple and convenient ordering.
+            </p>
+        </div>
+
+        <div class="service-card reveal">
+            <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M21 11.5a8 8 0 0 1-8.5 8
+                    8.4 8.4 0 0 1-4-.9L3 20l1.4-4.8
+                    A8 8 0 1 1 21 11.5z"/>
+                    <path d="M8 11h.01M12 11h.01M16 11h.01"/>
+                </svg>
+            </div>
+            <h3 class="font-bold text-sm">WHATSAPP SUPPORT</h3>
+            <p class="text-[11px] text-gray-500 mt-2">
+                09162773949
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRUST -->
+<section class="container-main mb-14" id="about">
+
+    <div class="trust-section p-7 md:p-10 reveal">
+
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+
+            <div>
+
+                <div class="text-[10px] tracking-widest text-brand-red font-bold">
+                    WHY CHOOSE US
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-black text-brand-navy mt-2">
+                    WHY SHOP WITH<br>
+                    DAMITECH?
+                </h2>
+
+                <p class="text-sm text-gray-500 leading-7 mt-4">
+                    We make buying electronics simple, convenient and
+                    reliable. Browse our products, select what you need
+                    and place your order directly through WhatsApp.
+                </p>
+
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+
+                <div class="bg-white p-4 rounded border">
+                    <div class="text-brand-red font-black mb-2">✓</div>
+                    <strong class="text-xs">Genuine Products</strong>
+                </div>
+
+                <div class="bg-white p-4 rounded border">
+                    <div class="text-brand-red font-black mb-2">✓</div>
+                    <strong class="text-xs">Competitive Prices</strong>
+                </div>
+
+                <div class="bg-white p-4 rounded border">
+                    <div class="text-brand-red font-black mb-2">✓</div>
+                    <strong class="text-xs">Fast Response</strong>
+                </div>
+
+                <div class="bg-white p-4 rounded border">
+                    <div class="text-brand-red font-black mb-2">✓</div>
+                    <strong class="text-xs">WhatsApp Ordering</strong>
+                </div>
+
+                <div class="bg-white p-4 rounded border">
+                    <div class="text-brand-red font-black mb-2">✓</div>
+                    <strong class="text-xs">Customer Support</strong>
+                </div>
+
+                <div class="bg-white p-4 rounded border">
+                    <div class="text-brand-red font-black mb-2">✓</div>
+                    <strong class="text-xs">Reliable Service</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+<section class="container-main mb-14" id="newsletter">
+
+    <div class="bg-brand-navy rounded-lg p-7 md:p-10 text-center reveal">
+
+        <div class="text-brand-red text-[10px] tracking-widest font-bold">
+            STAY UPDATED
+        </div>
+
+        <h2 class="text-white text-2xl md:text-3xl font-black mt-2">
+            NEVER MISS A DEAL
+        </h2>
+
+        <p class="text-gray-400 text-xs mt-2">
+            Get updates about new products, discounts and special offers.
+        </p>
+
+        <form
+            id="newsletterForm"
+            class="max-w-xl mx-auto mt-6 flex gap-2">
+
+            <input
+                id="emailInput"
+                type="email"
+                required
+                placeholder="Enter your email address"
+                class="flex-1 rounded px-4 py-3 text-xs outline-none">
+
+            <button class="btn-primary">
+                SUBSCRIBE
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer id="contact">
+
+    <div class="container-main py-12">
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+            <div>
+
+                <div class="brand-logo mb-5">
+                    <span class="damitech" style="color:white;">
+                        DAMITECH
+                    </span>
+                    <span class="electronics">
+                        ELECTRONICS
+                    </span>
+                </div>
+
+                <p class="text-xs text-gray-400 leading-6">
+                    Premium electronics and technology products
+                    for customers in Nigeria.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="footer-heading">QUICK LINKS</h3>
+
+                <a href="#" class="footer-link">Home</a>
+                <a href="#shop" class="footer-link">Shop</a>
+                <a href="#about" class="footer-link">About</a>
+                <a href="#contact" class="footer-link">Contact</a>
+                <a href="#newsletter" class="footer-link">Blog</a>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="footer-heading">PRODUCT CATEGORIES</h3>
+
+                <a href="#" onclick="filterProducts('Smartphones')" class="footer-link">
+                    Smartphones
+                </a>
+
+                <a href="#" onclick="filterProducts('Laptops')" class="footer-link">
+                    Laptops
+                </a>
+
+                <a href="#" onclick="filterProducts('Cameras')" class="footer-link">
+                    Cameras
+                </a>
+
+                <a href="#" onclick="filterProducts('Accessories')" class="footer-link">
+                    Accessories
+                </a>
+
+                <a href="#" onclick="filterProducts('Gaming')" class="footer-link">
+                    Gaming
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="footer-heading">CONTACT</h3>
+
+                <p class="footer-link">
+                    Olukayode Complex, Akure
+                </p>
+
+                <p class="footer-link">
+                    Phone: 09134228406
+                </p>
+
+                <p class="footer-link">
+                    WhatsApp: 09162773949
+                </p>
+
+                <button
+                    onclick="openWhatsAppGeneral()"
+                    class="btn-primary mt-3">
+                    ORDER VIA WHATSAPP
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between gap-3">
+
+            <p class="text-[10px] text-gray-500">
+                © 2026 DAMITECH ELECTRONICS. All Rights Reserved.
+            </p>
+
+            <div class="flex gap-4 text-gray-400">
+                <span>f</span>
+                <span>𝕏</span>
+                <span>◎</span>
+                <span>▶</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- CART OVERLAY -->
+<div id="overlay" class="overlay"></div>
+
+
+<!-- CART DRAWER -->
+<aside id="cartDrawer" class="cart-drawer">
+
+    <div class="p-5 border-b flex items-center justify-between">
+
+        <div>
+            <h2 class="font-black text-lg">YOUR CART</h2>
+            <p class="text-[10px] text-gray-400">
+                DAMITECH ELECTRONICS
+            </p>
+        </div>
+
+        <button
+            id="cartCloseBtn"
+            class="text-2xl text-gray-500"
+            aria-label="Close cart">
+            ×
+        </button>
+
+    </div>
+
+    <div id="cartBody" class="cart-body p-5">
+    </div>
+
+    <div class="border-t p-5">
+
+        <div class="flex justify-between mb-4">
+            <span class="text-xs text-gray-500">TOTAL</span>
+            <strong id="cartTotal" class="text-lg text-brand-red">
+                ₦0
+            </strong>
+        </div>
+
+        <button
+            id="cartWhatsappBtn"
+            class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded font-bold text-xs">
+            ORDER CART VIA WHATSAPP
+        </button>
+
+        <button
+            id="clearCartBtn"
+            class="w-full mt-2 bg-gray-100 py-3 rounded font-bold text-xs">
+            CLEAR CART
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- QUICK VIEW MODAL -->
+<div id="quickViewModal" class="modal-wrapper">
+
+    <div class="modal-box">
+
+        <div class="flex justify-end p-4">
+            <button
+                onclick="closeModal('quickViewModal')"
+                class="text-2xl text-gray-500">
+                ×
+            </button>
+        </div>
+
+        <div
+            id="quickViewContent"
+            class="p-5 md:p-8">
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ORDER CONFIRMATION MODAL -->
+<div id="orderModal" class="modal-wrapper">
+
+    <div class="modal-box">
+
+        <div class="p-5 border-b flex justify-between">
+
+            <div>
+                <h2 class="font-black text-xl">
+                    ORDER CONFIRMATION
+                </h2>
+
+                <p class="text-[10px] text-gray-400">
+                    DAMITECH ELECTRONICS
+                </p>
+            </div>
+
+            <button
+                onclick="closeModal('orderModal')"
+                class="text-2xl">
+                ×
+            </button>
+
+        </div>
+
+        <div class="p-5">
+
+            <div class="grid md:grid-cols-2 gap-5">
+
+                <div>
+
+                    <label class="text-[11px] font-bold">
+                        Customer Name
+                    </label>
+
+                    <input
+                        id="customerName"
+                        class="w-full border rounded px-3 py-3 text-xs mt-2"
+                        placeholder="Enter your name">
+
+                </div>
+
+                <div>
+
+                    <label class="text-[11px] font-bold">
+                        Phone Number
+                    </label>
+
+                    <input
+                        id="customerPhone"
+                        class="w-full border rounded px-3 py-3 text-xs mt-2"
+                        placeholder="Enter your phone">
+
+                </div>
+
+            </div>
+
+            <div id="orderSummary" class="mt-5"></div>
+
+            <div class="flex flex-wrap gap-2 mt-5">
+
+                <button
+                    onclick="sendConfirmationToWhatsApp()"
+                    class="bg-green-600 text-white px-5 py-3 rounded text-xs font-bold">
+                    SEND ORDER TO WHATSAPP
+                </button>
+
+                <button
+                    onclick="generateReceipt()"
+                    class="btn-primary">
+                    GENERATE RECEIPT
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- RECEIPT MODAL -->
+<div id="receiptModal" class="modal-wrapper">
+
+    <div class="modal-box">
+
+        <div class="receipt-paper" id="receiptPaper">
+
+            <div class="receipt-logo">
+
+                <!-- SAME BRAND LOGO USED THROUGHOUT THE WEBSITE -->
+                <div class="brand-logo">
+                    <span class="damitech">
+                        DAMITECH
+                    </span>
+
+                    <span class="electronics">
+                        ELECTRONICS
+                    </span>
+                </div>
+
+                <div class="text-[11px] text-gray-500 mt-3">
+                    Electronics & Technology
+                </div>
+
+                <div class="text-[11px] text-gray-500">
+                    Olukayode Complex, Akure
+                </div>
+
+                <div class="text-[11px] text-gray-500">
+                    Phone: 09134228406
+                </div>
+
+                <div class="text-[11px] text-gray-500">
+                    WhatsApp: 09162773949
+                </div>
+
+            </div>
+
+
+            <div class="receipt-divider"></div>
+
+            <div class="text-center">
+
+                <h2 class="font-black text-lg">
+                    RECEIPT
+                </h2>
+
+                <p
+                    id="receiptNumber"
+                    class="text-[11px] text-gray-500 mt-1">
+                </p>
+
+                <p
+                    id="receiptDate"
+                    class="text-[11px] text-gray-500">
+                </p>
+
+            </div>
+
+
+            <div class="receipt-divider"></div>
+
+
+            <div class="grid grid-cols-2 gap-2 text-xs">
+
+                <div>
+                    <strong>Customer:</strong>
+                    <span id="receiptCustomer"></span>
+                </div>
+
+                <div>
+                    <strong>Phone:</strong>
+                    <span id="receiptPhone"></span>
+                </div>
+
+            </div>
+
+
+            <div class="receipt-divider"></div>
+
+
+            <table class="receipt-table">
+
+                <thead>
+
+                    <tr>
+                        <th>ITEM</th>
+                        <th>QTY</th>
+                        <th>PRICE</th>
+                        <th>TOTAL</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="receiptItems">
+                </tbody>
+
+            </table>
+
+
+            <div class="receipt-divider"></div>
+
+
+            <div class="max-w-xs ml-auto text-xs">
+
+                <div class="flex justify-between py-1">
+                    <span>Subtotal:</span>
+                    <strong id="receiptSubtotal"></strong>
+                </div>
+
+                <div class="flex justify-between py-1">
+                    <span>Discount:</span>
+                    <strong>₦0</strong>
+                </div>
+
+                <div class="flex justify-between py-2 text-base">
+                    <span class="font-black">TOTAL:</span>
+                    <strong
+                        id="receiptTotal"
+                        class="text-brand-red">
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="receipt-divider"></div>
+
+
+            <div class="text-center text-[11px] leading-6">
+
+                <strong>ORDER METHOD:</strong>
+                WhatsApp
+                <br>
+
+                <strong>ORDER STATUS:</strong>
+                Pending Confirmation
+
+                <p class="mt-5">
+                    Thank you for shopping with
+                    <strong>DAMITECH ELECTRONICS.</strong>
+                </p>
+
+                <p>
+                    For enquiries: 09134228406
+                </p>
+
+                <p>
+                    WhatsApp: 09162773949
+                </p>
+
+                <p>
+                    Olukayode Complex, Akure, Nigeria
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="no-print border-t p-4 flex justify-end gap-2">
+
+            <button
+                onclick="window.print()"
+                class="btn-primary">
+                PRINT RECEIPT
+            </button>
+
+            <button
+                onclick="closeModal('receiptModal')"
+                class="bg-gray-100 px-5 py-3 rounded text-xs font-bold">
+                CLOSE
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+<div id="toast" class="toast">
+    Added to cart
+</div>
+
+
+<!-- FLOATING WHATSAPP -->
+<button
+    class="floating-whatsapp"
+    onclick="openWhatsAppGeneral()"
+    aria-label="Order through WhatsApp">
+
+    <svg width="21" height="21" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 11.5a8 8 0 0 1-8.5 8
+        8.4 8.4 0 0 1-4-.9L3 20l1.4-4.8
+        A8 8 0 1 1 21 11.5z"/>
+        <path d="M8 11h.01M12 11h.01M16 11h.01"/>
+    </svg>
+
+    <span>ORDER VIA WHATSAPP</span>
+
+</button>
+
+
+<!-- BACK TO TOP -->
+<button
+    id="backTop"
+    class="fixed right-5 bottom-24 w-10 h-10 bg-brand-navy text-white rounded-full hidden z-50"
+    aria-label="Back to top">
+    ↑
+</button>
+
+
+<script>
+
+/* ============================================================
+   DAMITECH ELECTRONICS
+   VANILLA JAVASCRIPT E-COMMERCE ENGINE
+============================================================ */
+
+const WHATSAPP_NUMBER = "2349162773949";
+const BUSINESS_PHONE = "09134228406";
+const BUSINESS_ADDRESS = "Olukayode Complex, Akure, Nigeria";
+
+
+/* ============================================================
+   IMAGE FALLBACK
+   Prevents broken-image icons from appearing.
+============================================================ */
+
+function imageFallback(img) {
+
+    if (img.dataset.fallbackApplied) return;
+
+    img.dataset.fallbackApplied = "true";
+
+    img.src =
+        "https://placehold.co/800x600/f3f4f6/071426?text=DAMITECH+ELECTRONICS";
+
+}
+
+
+/* ============================================================
+   PRODUCT DATABASE
+============================================================ */
+
+const products = [
+
+{
+    id: 1,
+    name: "iPhone 15 Pro",
+    category: "Smartphones",
+    brand: "Apple",
+    price: 1450000,
+    oldPrice: 1580000,
+    discount: 8,
+    image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 48,
+    description: "Premium Apple smartphone with advanced performance and camera system.",
+    stock: 12,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 2,
+    name: "Samsung Galaxy S25",
+    category: "Smartphones",
+    brand: "Samsung",
+    price: 1150000,
+    oldPrice: 1250000,
+    discount: 8,
+    image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 37,
+    description: "Modern Samsung flagship smartphone with premium performance.",
+    stock: 9,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 3,
+    name: "Google Pixel Smartphone",
+    category: "Smartphones",
+    brand: "Google",
+    price: 820000,
+    oldPrice: 900000,
+    discount: 9,
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=85",
+    rating: 4,
+    reviews: 29,
+    description: "Clean Android experience with excellent photography.",
+    stock: 14,
+    featured: true,
+    bestseller: false
+},
+
+{
+    id: 4,
+    name: "HP Core i5 Laptop",
+    category: "Laptops",
+    brand: "HP",
+    price: 750000,
+    oldPrice: 820000,
+    discount: 9,
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 32,
+    description: "Reliable Core i5 laptop for work, school and business.",
+    stock: 10,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 5,
+    name: "Premium Business Laptop",
+    category: "Laptops",
+    brand: "Lenovo",
+    price: 850000,
+    oldPrice: 930000,
+    discount: 9,
+    image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 38,
+    description: "Powerful laptop designed for business and creative workloads.",
+    stock: 7,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 6,
+    name: "MacBook Pro",
+    category: "Laptops",
+    brand: "Apple",
+    price: 1850000,
+    oldPrice: 2000000,
+    discount: 8,
+    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 45,
+    description: "Premium Apple laptop for professionals and creators.",
+    stock: 5,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 7,
+    name: "Canon EOS Camera",
+    category: "Cameras",
+    brand: "Canon",
+    price: 950000,
+    oldPrice: 1050000,
+    discount: 10,
+    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 26,
+    description: "Professional digital camera for photography and video.",
+    stock: 6,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 8,
+    name: "Sony Mirrorless Camera",
+    category: "Cameras",
+    brand: "Sony",
+    price: 1250000,
+    oldPrice: 1380000,
+    discount: 9,
+    image: "https://images.unsplash.com/photo-1606986628253-6a2a43b2f4b6?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 21,
+    description: "Compact professional mirrorless camera system.",
+    stock: 4,
+    featured: true,
+    bestseller: false
+},
+
+{
+    id: 9,
+    name: "Sony 55-inch Smart TV",
+    category: "TV & Audio",
+    brand: "Sony",
+    price: 890000,
+    oldPrice: 980000,
+    discount: 9,
+    image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 19,
+    description: "Large smart television with cinematic picture quality.",
+    stock: 8,
+    featured: true,
+    bestseller: false
+},
+
+{
+    id: 10,
+    name: "Premium Wireless Headphones",
+    category: "TV & Audio",
+    brand: "Sony",
+    price: 85000,
+    oldPrice: 110000,
+    discount: 23,
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 53,
+    description: "Wireless headphones with immersive sound.",
+    stock: 18,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 11,
+    name: "Smart Watch Pro",
+    category: "Smartwatches",
+    brand: "Apple",
+    price: 120000,
+    oldPrice: 145000,
+    discount: 17,
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=85",
+    rating: 4,
+    reviews: 42,
+    description: "Modern smartwatch for fitness, communication and everyday use.",
+    stock: 20,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 12,
+    name: "Gaming Controller",
+    category: "Gaming",
+    brand: "Sony",
+    price: 95000,
+    oldPrice: 120000,
+    discount: 21,
+    image: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 34,
+    description: "Responsive wireless gaming controller.",
+    stock: 15,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 13,
+    name: "Mechanical Gaming Keyboard",
+    category: "Gaming",
+    brand: "Gaming",
+    price: 75000,
+    oldPrice: 95000,
+    discount: 21,
+    image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=700&q=85",
+    rating: 4,
+    reviews: 25,
+    description: "Mechanical keyboard designed for gaming and productivity.",
+    stock: 13,
+    featured: true,
+    bestseller: false
+},
+
+{
+    id: 14,
+    name: "Wireless Computer Mouse",
+    category: "Accessories",
+    brand: "Logitech",
+    price: 35000,
+    oldPrice: 45000,
+    discount: 22,
+    image: "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=85",
+    rating: 4,
+    reviews: 31,
+    description: "Comfortable wireless mouse for computers and laptops.",
+    stock: 25,
+    featured: true,
+    bestseller: false
+},
+
+{
+    id: 15,
+    name: "Premium Tablet",
+    category: "Smartphones",
+    brand: "Samsung",
+    price: 420000,
+    oldPrice: 490000,
+    discount: 14,
+    image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 17,
+    description: "Large-screen tablet for entertainment, work and learning.",
+    stock: 11,
+    featured: true,
+    bestseller: false
+},
+
+{
+    id: 16,
+    name: "USB-C Power Bank",
+    category: "Accessories",
+    brand: "Anker",
+    price: 65000,
+    oldPrice: 80000,
+    discount: 19,
+    image: "https://images.unsplash.com/photo-1609592424809-e9f0e9d3d9d3?auto=format&fit=crop&w=700&q=85",
+    rating: 4,
+    reviews: 27,
+    description: "High-capacity portable power bank with USB-C charging.",
+    stock: 30,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 17,
+    name: "4K Computer Monitor",
+    category: "Laptops",
+    brand: "LG",
+    price: 480000,
+    oldPrice: 550000,
+    discount: 13,
+    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 23,
+    description: "Sharp 4K monitor for work, gaming and content creation.",
+    stock: 9,
+    featured: true,
+    bestseller: false
+},
+
+{
+    id: 18,
+    name: "Bluetooth Speaker",
+    category: "TV & Audio",
+    brand: "JBL",
+    price: 95000,
+    oldPrice: 120000,
+    discount: 21,
+    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 36,
+    description: "Portable wireless speaker with powerful audio.",
+    stock: 16,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 19,
+    name: "Wireless Earbuds",
+    category: "Accessories",
+    brand: "Apple",
+    price: 95000,
+    oldPrice: 120000,
+    discount: 21,
+    image: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=700&q=85",
+    rating: 4,
+    reviews: 44,
+    description: "Compact wireless earbuds with charging case.",
+    stock: 22,
+    featured: true,
+    bestseller: true
+},
+
+{
+    id: 20,
+    name: "Gaming Laptop",
+    category: "Laptops",
+    brand: "ASUS",
+    price: 1450000,
+    oldPrice: 1600000,
+    discount: 9,
+    image: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=700&q=85",
+    rating: 5,
+    reviews: 28,
+    description: "High-performance gaming laptop with powerful hardware.",
+    stock: 6,
+    featured: true,
+    bestseller: true
+}
+
+];
+
+
+/* ============================================================
+   STATE
+============================================================ */
+
+let cart = JSON.parse(localStorage.getItem("damitech_cart")) || [];
+let wishlist = JSON.parse(localStorage.getItem("damitech_wishlist")) || [];
+let currentProducts = [...products];
+let currentOrder = [];
+
+
+/* ============================================================
+   CURRENCY
+============================================================ */
+
+function formatNaira(amount) {
+
+    return new Intl.NumberFormat("en-NG", {
+        style: "currency",
+        currency: "NGN",
+        maximumFractionDigits: 0
+    }).format(amount);
+
+}
+
+
+/* ============================================================
+   PRODUCT CARD
+============================================================ */
+
+function productCard(product) {
+
+    const isWishlisted = wishlist.includes(product.id);
+
+    return `
+
+    <article class="product-card reveal">
+
+        <div class="product-image-box">
+
+            ${
+                product.discount > 0
+                ? `<span class="sale-badge">${product.discount}% OFF</span>`
+                : ""
+            }
+
+            <button
+                class="wishlist-btn ${isWishlisted ? "active" : ""}"
+                onclick="toggleWishlist(${product.id})"
+                aria-label="Add to wishlist">
+
+                <svg width="16" height="16"
+                     viewBox="0 0 24 24"
+                     fill="${isWishlisted ? "currentColor" : "none"}"
+                     stroke="currentColor"
+                     stroke-width="1.8">
+
+                    <path d="M20.8 8.6
+                    c0 5.5-8.8 10.4-8.8 10.4S3.2 14.1 3.2 8.6
+                    A4.6 4.6 0 0 1 12 6.4
+                    a4.6 4.6 0 0 1 8.8 2.2z"/>
+
+                </svg>
+
+            </button>
+
+            <img
+                src="${product.image}"
+                alt="${product.name}"
+                class="product-image"
+                loading="lazy"
+                onerror="imageFallback(this)">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <div class="product-category">
+                ${product.brand} • ${product.category}
+            </div>
+
+            <h3 class="product-name">
+                ${product.name}
+            </h3>
+
+            <div class="flex items-center gap-1 mb-2">
+
+                <span class="rating">
+                    ${"★".repeat(product.rating)}
+                    ${"☆".repeat(5-product.rating)}
+                </span>
+
+                <span class="review-count">
+                    (${product.reviews})
+                </span>
+
+            </div>
+
+            <div class="flex items-center gap-2 flex-wrap">
+
+                <span class="price">
+                    ${formatNaira(product.price)}
+                </span>
+
+                ${
+                    product.oldPrice
+                    ? `<span class="old-price">
+                        ${formatNaira(product.oldPrice)}
+                    </span>`
+                    : ""
+                }
+
+            </div>
+
+
+            <div class="product-actions">
+
+                <button
+                    class="action-btn quick-btn"
+                    onclick="openQuickView(${product.id})">
+                    QUICK VIEW
+                </button>
+
+                <button
+                    class="action-btn cart-btn"
+                    onclick="addToCart(${product.id})">
+                    ADD TO CART
+                </button>
+
+                <button
+                    class="action-btn whatsapp-btn"
+                    onclick="openWhatsAppProduct(
+                        '${escapeText(product.name)}',
+                        ${product.price}
+                    )">
+                    ORDER VIA WHATSAPP
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+    `;
+}
+
+
+/* ============================================================
+   RENDER PRODUCTS
+============================================================ */
+
+function renderProducts(list = products) {
+
+    const grid = document.getElementById("productGrid");
+
+    currentProducts = list;
+
+    if (!list.length) {
+
+        grid.innerHTML = `
+            <div class="empty-state col-span-full">
+                <div class="text-3xl mb-3">⌕</div>
+                <strong>No products found.</strong>
+                <p class="text-xs mt-2">
+                    Try another search or category.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+    grid.innerHTML = list.map(productCard).join("");
+
+    setTimeout(() => {
+        document.querySelectorAll(".reveal").forEach(el => {
+            el.classList.add("visible");
+        });
+    }, 50);
+
+}
+
+
+/* ============================================================
+   FILTER
+============================================================ */
+
+function filterProducts(category) {
+
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+
+        btn.classList.toggle(
+            "active",
+            btn.dataset.category === category
+        );
+
+    });
+
+    let result =
+        category === "all"
+        ? products
+        : products.filter(p => p.category === category);
+
+    renderProducts(result);
+
+    scrollToShop();
+
+}
+
+
+/* ============================================================
+   SEARCH
+============================================================ */
+
+function performSearch(value) {
+
+    const query = value.trim().toLowerCase();
+
+    const category =
+        document.getElementById("searchCategory")?.value || "all";
+
+    let result = products.filter(product => {
+
+        const searchable = `
+            ${product.name}
+            ${product.category}
+            ${product.brand}
+            ${product.description}
+        `.toLowerCase();
+
+        const matchesQuery =
+            !query || searchable.includes(query);
+
+        const matchesCategory =
+            category === "all" ||
+            product.category === category;
+
+        return matchesQuery && matchesCategory;
+
+    });
+
+    renderProducts(result);
+
+    document.getElementById("shop").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+
+/* ============================================================
+   CART
+============================================================ */
+
+function saveCart() {
+
+    localStorage.setItem(
+        "damitech_cart",
+        JSON.stringify(cart)
+    );
+
+    updateCartUI();
+
+}
+
+
+function addToCart(id) {
+
+    const product = products.find(p => p.id === id);
+
+    if (!product) return;
+
+    const existing = cart.find(item => item.id === id);
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        cart.push({
+            id: product.id,
+            quantity: 1
+        });
+    }
+
+    saveCart();
+
+    showToast("Added to cart");
+
+}
+
+
+function removeFromCart(id) {
+
+    cart = cart.filter(item => item.id !== id);
+
+    saveCart();
+
+    showToast("Removed from cart");
+
+}
+
+
+function changeQuantity(id, amount) {
+
+    const item = cart.find(item => item.id === id);
+
+    if (!item) return;
+
+    item.quantity += amount;
+
+    if (item.quantity <= 0) {
+        removeFromCart(id);
+        return;
+    }
+
+    saveCart();
+
+}
+
+
+function clearCart() {
+
+    cart = [];
+
+    saveCart();
+
+    showToast("Cart cleared");
+
+}
+
+
+function cartTotal() {
+
+    return cart.reduce((total, item) => {
+
+        const product = products.find(p => p.id === item.id);
+
+        return total +
+            (product ? product.price * item.quantity : 0);
+
+    }, 0);
+
+}
+
+
+function cartQuantity() {
+
+    return cart.reduce(
+        (total, item) => total + item.quantity,
+        0
+    );
+
+}
+
+
+function updateCartUI() {
+
+    document.getElementById("cartCount").textContent =
+        cartQuantity();
+
+    document.getElementById("cartTotal").textContent =
+        formatNaira(cartTotal());
+
+
+    const body = document.getElementById("cartBody");
+
+    if (!cart.length) {
+
+        body.innerHTML = `
+            <div class="empty-state">
+                <div class="text-4xl mb-4">🛒</div>
+                <strong>Your cart is empty.</strong>
+                <p class="text-xs mt-2">
+                    Add products to begin your order.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    body.innerHTML = cart.map(item => {
+
+        const product =
+            products.find(p => p.id === item.id);
+
+        if (!product) return "";
+
+        return `
+
+        <div class="cart-item">
+
+            <img
+                src="${product.image}"
+                alt="${product.name}"
+                onerror="imageFallback(this)">
+
+            <div class="flex-1">
+
+                <h4 class="text-xs font-bold">
+                    ${product.name}
+                </h4>
+
+                <div class="text-brand-red font-black text-xs mt-1">
+                    ${formatNaira(product.price)}
+                </div>
+
+                <div class="quantity-control">
+
+                    <button
+                        onclick="changeQuantity(${product.id}, -1)">
+                        −
+                    </button>
+
+                    <span class="text-xs font-bold">
+                        ${item.quantity}
+                    </span>
+
+                    <button
+                        onclick="changeQuantity(${product.id}, 1)">
+                        +
+                    </button>
+
+                    <button
+                        onclick="removeFromCart(${product.id})"
+                        class="ml-auto text-red-500 border-0">
+                        Remove
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        `;
+
+    }).join("");
+
+}
+
+
+/* ============================================================
+   CART DRAWER
+============================================================ */
+
+function openCart() {
+
+    document.getElementById("cartDrawer")
+        .classList.add("open");
+
+    document.getElementById("overlay")
+        .classList.add("show");
+
+}
+
+
+function closeCart() {
+
+    document.getElementById("cartDrawer")
+        .classList.remove("open");
+
+    document.getElementById("overlay")
+        .classList.remove("show");
+
+}
+
+
+/* ============================================================
+   WHATSAPP
+============================================================ */
+
+function whatsappURL(message) {
+
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+}
+
+
+function openWhatsAppGeneral() {
+
+    const message =
+`Hello DAMITECH ELECTRONICS,
+
+I would like to make an enquiry/order.
+
+Please provide information about your available products and prices.
+
+Thank you.`;
+
+    window.open(
+        whatsappURL(message),
+        "_blank"
+    );
+
+}
+
+
+function openWhatsAppProduct(name, price) {
+
+    const message =
+`Hello DAMITECH ELECTRONICS,
+
+I would like to order:
+
+Product: ${name}
+
+Price: ${formatNaira(price)}
+
+Quantity: 1
+
+Please confirm availability and delivery information.
+
+Thank you.`;
+
+    showToast("Opening WhatsApp...");
+
+    setTimeout(() => {
+
+        window.open(
+            whatsappURL(message),
+            "_blank"
+        );
+
+    }, 300);
+
+}
+
+
+function orderCartViaWhatsApp() {
+
+    if (!cart.length) {
+
+        showToast("Your cart is empty");
+
+        return;
+    }
+
+    let message =
+`Hello DAMITECH ELECTRONICS,
+
+I would like to place an order for:
+
+`;
+
+    cart.forEach(item => {
+
+        const product =
+            products.find(p => p.id === item.id);
+
+        message +=
+`${item.quantity} × ${product.name} — ${formatNaira(product.price * item.quantity)}
+`;
+
+    });
+
+    message +=
+`
+Total: ${formatNaira(cartTotal())}
+
+Please confirm availability and delivery details.
+
+Thank you.`;
+
+    window.open(
+        whatsappURL(message),
+        "_blank"
+    );
+
+}
+
+
+/* ============================================================
+   QUICK VIEW
+============================================================ */
+
+function openQuickView(id) {
+
+    const product =
+        products.find(p => p.id === id);
+
+    if (!product) return;
+
+    document.getElementById("quickViewContent").innerHTML = `
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <div class="bg-gray-50 rounded-lg min-h-[350px] flex items-center justify-center">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    class="w-full h-[350px] object-contain"
+                    onerror="imageFallback(this)">
+
+            </div>
+
+            <div>
+
+                <div class="text-[10px] uppercase text-gray-400 font-bold">
+                    ${product.brand} • ${product.category}
+                </div>
+
+                <h2 class="text-3xl font-black mt-2">
+                    ${product.name}
+                </h2>
+
+                <div class="mt-3">
+                    <span class="rating">
+                        ${"★".repeat(product.rating)}
+                        ${"☆".repeat(5-product.rating)}
+                    </span>
+
+                    <span class="text-xs text-gray-400">
+                        (${product.reviews} reviews)
+                    </span>
+                </div>
+
+                <p class="text-gray-500 text-sm leading-7 mt-5">
+                    ${product.description}
+                </p>
+
+                <div class="mt-5">
+
+                    <span class="text-2xl font-black text-brand-red">
+                        ${formatNaira(product.price)}
+                    </span>
+
+                    ${
+                        product.oldPrice
+                        ? `<span class="text-sm text-gray-400 line-through ml-2">
+                            ${formatNaira(product.oldPrice)}
+                           </span>`
+                        : ""
+                    }
+
+                </div>
+
+                <div class="mt-4 text-xs">
+                    <strong>Stock:</strong>
+                    <span class="${product.stock < 5 ? "text-red-500" : "text-green-600"}">
+                        ${product.stock} available
+                    </span>
+                </div>
+
+                <div class="flex gap-2 mt-6">
+
+                    <button
+                        class="btn-primary"
+                        onclick="addToCart(${product.id}); closeModal('quickViewModal');">
+                        ADD TO CART
+                    </button>
+
+                    <button
+                        class="bg-green-600 text-white px-5 py-3 rounded text-xs font-bold"
+                        onclick="openWhatsAppProduct(
+                            '${escapeText(product.name)}',
+                            ${product.price}
+                        )">
+                        ORDER VIA WHATSAPP
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `;
+
+    openModal("quickViewModal");
+
+}
+
+
+/* ============================================================
+   WISHLIST
+============================================================ */
+
+function toggleWishlist(id) {
+
+    if (wishlist.includes(id)) {
+
+        wishlist =
+            wishlist.filter(item => item !== id);
+
+        showToast("Removed from wishlist");
+
+    } else {
+
+        wishlist.push(id);
+
+        showToast("Added to wishlist");
+
+    }
+
+    localStorage.setItem(
+        "damitech_wishlist",
+        JSON.stringify(wishlist)
+    );
+
+    renderProducts(currentProducts);
+
+}
+
+
+/* ============================================================
+   ORDER CONFIRMATION
+============================================================ */
+
+function openOrderConfirmation() {
+
+    if (!cart.length) {
+
+        showToast("Your cart is empty");
+
+        return;
+    }
+
+    currentOrder = cart.map(item => ({
+        ...item
+    }));
+
+    renderOrderSummary();
+
+    openModal("orderModal");
+
+}
+
+
+function renderOrderSummary() {
+
+    const total =
+        currentOrder.reduce((sum, item) => {
+
+            const product =
+                products.find(p => p.id === item.id);
+
+            return sum +
+                product.price * item.quantity;
+
+        }, 0);
+
+
+    document.getElementById("orderSummary").innerHTML = `
+
+        <div class="border rounded-lg p-4">
+
+            <h3 class="font-black text-sm mb-4">
+                ORDER SUMMARY
+            </h3>
+
+            ${currentOrder.map(item => {
+
+                const product =
+                    products.find(p => p.id === item.id);
+
+                return `
+
+                <div class="flex justify-between border-b py-3">
+
+                    <div>
+                        <div class="font-bold text-xs">
+                            ${product.name}
+                        </div>
+
+                        <div class="text-[10px] text-gray-400">
+                            Quantity: ${item.quantity}
+                        </div>
+                    </div>
+
+                    <strong class="text-xs text-brand-red">
+                        ${formatNaira(
+                            product.price * item.quantity
+                        )}
+                    </strong>
+
+                </div>
+
+                `;
+
+            }).join("")}
+
+            <div class="flex justify-between mt-4">
+
+                <strong>Total</strong>
+
+                <strong class="text-brand-red">
+                    ${formatNaira(total)}
+                </strong>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+function sendConfirmationToWhatsApp() {
+
+    const name =
+        document.getElementById("customerName").value.trim();
+
+    const phone =
+        document.getElementById("customerPhone").value.trim();
+
+
+    if (!name || !phone) {
+
+        showToast("Enter customer name and phone");
+
+        return;
+    }
+
+
+    let message =
+`Hello DAMITECH ELECTRONICS,
+
+I would like to place an order.
+
+Customer Name: ${name}
+Customer Phone: ${phone}
+
+ORDER ITEMS:
+`;
+
+
+    currentOrder.forEach(item => {
+
+        const product =
+            products.find(p => p.id === item.id);
+
+        message +=
+`${item.quantity} × ${product.name} — ${formatNaira(product.price * item.quantity)}
+`;
+
+    });
+
+
+    const total =
+        currentOrder.reduce((sum, item) => {
+
+            const product =
+                products.find(p => p.id === item.id);
+
+            return sum +
+                product.price * item.quantity;
+
+        }, 0);
+
+
+    message +=
+`
+TOTAL: ${formatNaira(total)}
+
+Order Method: WhatsApp
+
+Please confirm availability and delivery information.
+
+Thank you.`;
+
+    window.open(
+        whatsappURL(message),
+        "_blank"
+    );
+
+}
+
+
+/* ============================================================
+   RECEIPT GENERATION
+============================================================ */
+
+function generateReceipt() {
+
+    const name =
+        document.getElementById("customerName").value.trim()
+        || "Walk-in Customer";
+
+    const phone =
+        document.getElementById("customerPhone").value.trim()
+        || "Not provided";
+
+
+    if (!currentOrder.length) {
+
+        currentOrder =
+            cart.map(item => ({...item}));
+
+    }
+
+
+    if (!currentOrder.length) {
+
+        showToast("No order available");
+
+        return;
+    }
+
+
+    const receiptNo =
+        "DME-" +
+        Date.now().toString().slice(-8);
+
+
+    const now = new Date();
+
+    const dateString =
+        now.toLocaleDateString("en-NG", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric"
+        });
+
+    const timeString =
+        now.toLocaleTimeString("en-NG", {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
+
+    document.getElementById("receiptNumber").textContent =
+        "Receipt No: " + receiptNo;
+
+    document.getElementById("receiptDate").textContent =
+        `Date: ${dateString} • ${timeString}`;
+
+
+    document.getElementById("receiptCustomer").textContent =
+        " " + name;
+
+    document.getElementById("receiptPhone").textContent =
+        " " + phone;
+
+
+    let subtotal = 0;
+
+
+    document.getElementById("receiptItems").innerHTML =
+        currentOrder.map(item => {
+
+            const product =
+                products.find(p => p.id === item.id);
+
+            const total =
+                product.price * item.quantity;
+
+            subtotal += total;
+
+            return `
+
+                <tr>
+
+                    <td>${product.name}</td>
+
+                    <td>${item.quantity}</td>
+
+                    <td>${formatNaira(product.price)}</td>
+
+                    <td>${formatNaira(total)}</td>
+
+                </tr>
+
+            `;
+
+        }).join("");
+
+
+    document.getElementById("receiptSubtotal").textContent =
+        formatNaira(subtotal);
+
+    document.getElementById("receiptTotal").textContent =
+        formatNaira(subtotal);
+
+
+    openModal("receiptModal");
+
+    showToast("Receipt generated successfully");
+
+}
+
+
+/* ============================================================
+   MODALS
+============================================================ */
+
+function openModal(id) {
+
+    document.getElementById(id)
+        .classList.add("show");
+
+}
+
+
+function closeModal(id) {
+
+    document.getElementById(id)
+        .classList.remove("show");
+
+}
+
+
+/* ============================================================
+   HERO SLIDER
+============================================================ */
+
+const heroSlides =
+    document.querySelectorAll(".hero-slide");
+
+const heroDots =
+    document.querySelectorAll(".hero-dot");
+
+let heroIndex = 0;
+let heroTimer;
+
+
+function showHero(index) {
+
+    heroIndex =
+        (index + heroSlides.length) %
+        heroSlides.length;
+
+
+    heroSlides.forEach((slide, i) => {
+
+        slide.classList.toggle(
+            "active",
+            i === heroIndex
+        );
+
+    });
+
+
+    heroDots.forEach((dot, i) => {
+
+        dot.classList.toggle(
+            "active",
+            i === heroIndex
+        );
+
+    });
+
+}
+
+
+function nextHero() {
+
+    showHero(heroIndex + 1);
+
+}
+
+
+function prevHero() {
+
+    showHero(heroIndex - 1);
+
+}
+
+
+function startHeroSlider() {
+
+    clearInterval(heroTimer);
+
+    heroTimer =
+        setInterval(nextHero, 5500);
+
+}
+
+
+document.getElementById("heroNext")
+    .addEventListener("click", () => {
+
+        nextHero();
+        startHeroSlider();
+
+    });
+
+
+document.getElementById("heroPrev")
+    .addEventListener("click", () => {
+
+        prevHero();
+        startHeroSlider();
+
+    });
+
+
+heroDots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        showHero(index);
+        startHeroSlider();
+
+    });
+
+});
+
+
+startHeroSlider();
+
+
+/* ============================================================
+   TOUCH SWIPE FOR HERO
+============================================================ */
+
+let touchStartX = 0;
+
+document
+    .querySelector(".hero-section")
+    .addEventListener("touchstart", e => {
+
+        touchStartX =
+            e.changedTouches[0].screenX;
+
+    }, {passive:true});
+
+
+document
+    .querySelector(".hero-section")
+    .addEventListener("touchend", e => {
+
+        const touchEndX =
+            e.changedTouches[0].screenX;
+
+        const difference =
+            touchStartX - touchEndX;
+
+        if (Math.abs(difference) > 50) {
+
+            if (difference > 0) {
+                nextHero();
+            } else {
+                prevHero();
+            }
+
+            startHeroSlider();
+
+        }
+
+    }, {passive:true});
+
+
+/* ============================================================
+   COUNTDOWN
+============================================================ */
+
+let dealEnd =
+    Date.now() + (
+        2 * 24 * 60 * 60 * 1000 +
+        14 * 60 * 60 * 1000 +
+        36 * 60 * 1000
+    );
+
+
+function updateCountdown() {
+
+    const remaining =
+        Math.max(0, dealEnd - Date.now());
+
+
+    if (remaining <= 0) {
+
+        document.getElementById("countdown")
+            .textContent = "DEAL ENDED";
+
+        return;
+    }
+
+
+    const days =
+        Math.floor(
+            remaining / (1000 * 60 * 60 * 24)
+        );
+
+    const hours =
+        Math.floor(
+            (remaining / (1000 * 60 * 60)) % 24
+        );
+
+    const minutes =
+        Math.floor(
+            (remaining / (1000 * 60)) % 60
+        );
+
+    const seconds =
+        Math.floor(
+            (remaining / 1000) % 60
+        );
+
+
+    document.getElementById("countdown")
+        .textContent =
+        `${String(days).padStart(2,"0")} : ` +
+        `${String(hours).padStart(2,"0")} : ` +
+        `${String(minutes).padStart(2,"0")} : ` +
+        `${String(seconds).padStart(2,"0")}`;
+
+}
+
+
+setInterval(updateCountdown, 1000);
+
+updateCountdown();
+
+
+/* ============================================================
+   DEAL PRODUCTS
+============================================================ */
+
+function renderDeals() {
+
+    const deals =
+        products
+        .filter(p => p.discount >= 17)
+        .slice(0, 4);
+
+
+    document.getElementById("dealGrid").innerHTML =
+        deals.map(product => `
+
+        <div class="bg-white text-gray-900 rounded p-3">
+
+            <div class="h-32 bg-gray-100 rounded flex items-center justify-center">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    class="w-full h-full object-contain"
+                    onerror="imageFallback(this)">
+
+            </div>
+
+            <div class="mt-3">
+
+                <div class="text-[9px] text-gray-400">
+                    ${product.category}
+                </div>
+
+                <h3 class="font-bold text-xs mt-1">
+                    ${product.name}
+                </h3>
+
+                <div class="mt-2">
+                    <span class="font-black text-brand-red text-sm">
+                        ${formatNaira(product.price)}
+                    </span>
+
+                    <span class="line-through text-[9px] text-gray-400 ml-1">
+                        ${formatNaira(product.oldPrice)}
+                    </span>
+                </div>
+
+                <div class="deal-progress mt-3">
+                    <span style="width:${Math.max(20, 100-product.discount)}%"></span>
+                </div>
+
+                <button
+                    onclick="openWhatsAppProduct(
+                        '${escapeText(product.name)}',
+                        ${product.price}
+                    )"
+                    class="w-full bg-green-600 text-white rounded py-2 mt-3 text-[9px] font-bold">
+                    ORDER VIA WHATSAPP
+                </button>
+
+            </div>
+
+        </div>
+
+        `).join("");
+
+}
+
+
+/* ============================================================
+   BESTSELLERS
+============================================================ */
+
+function renderBestsellers() {
+
+    const best =
+        products
+        .filter(p => p.bestseller)
+        .slice(0, 6);
+
+
+    document.getElementById("bestsellerGrid").innerHTML =
+        best.map(product => productCard(product)).join("");
+
+}
+
+
+/* ============================================================
+   TOAST
+============================================================ */
+
+let toastTimer;
+
+function showToast(message) {
+
+    const toast =
+        document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer =
+        setTimeout(() => {
+
+            toast.classList.remove("show");
+
+        }, 2500);
+
+}
+
+
+/* ============================================================
+   MOBILE MENU
+============================================================ */
+
+document
+    .getElementById("mobileMenuBtn")
+    .addEventListener("click", () => {
+
+        document
+            .getElementById("mobileMenu")
+            .classList.add("open");
+
+    });
+
+
+document
+    .getElementById("mobileMenuClose")
+    .addEventListener("click", () => {
+
+        document
+            .getElementById("mobileMenu")
+            .classList.remove("open");
+
+    });
+
+
+document
+    .querySelectorAll("#mobileMenu a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document
+                .getElementById("mobileMenu")
+                .classList.remove("open");
+
+        });
+
+    });
+
+
+/* ============================================================
+   SEARCH EVENTS
+============================================================ */
+
+document
+    .getElementById("searchInput")
+    .addEventListener("input", e => {
+
+        performSearch(e.target.value);
+
+    });
+
+
+document
+    .getElementById("searchBtn")
+    .addEventListener("click", () => {
+
+        performSearch(
+            document.getElementById("searchInput").value
+        );
+
+    });
+
+
+document
+    .getElementById("mobileSearchInput")
+    .addEventListener("input", e => {
+
+        performSearch(e.target.value);
+
+    });
+
+
+document
+    .getElementById("mobileSearchBtn")
+    .addEventListener("click", () => {
+
+        performSearch(
+            document.getElementById("mobileSearchInput").value
+        );
+
+    });
+
+
+document
+    .getElementById("searchCategory")
+    .addEventListener("change", () => {
+
+        performSearch(
+            document.getElementById("searchInput").value
+        );
+
+    });
+
+
+/* ============================================================
+   FILTER BUTTON EVENTS
+============================================================ */
+
+document
+    .querySelectorAll(".filter-btn")
+    .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            filterProducts(
+                button.dataset.category
+            );
+
+        });
+
+    });
+
+
+/* ============================================================
+   CART EVENTS
+============================================================ */
+
+document
+    .getElementById("cartOpenBtn")
+    .addEventListener("click", openCart);
+
+
+document
+    .getElementById("cartCloseBtn")
+    .addEventListener("click", closeCart);
+
+
+document
+    .getElementById("overlay")
+    .addEventListener("click", closeCart);
+
+
+document
+    .getElementById("clearCartBtn")
+    .addEventListener("click", clearCart);
+
+
+document
+    .getElementById("cartWhatsappBtn")
+    .addEventListener("click", orderCartViaWhatsApp);
+
+
+/* ============================================================
+   NEWSLETTER
+============================================================ */
+
+document
+    .getElementById("newsletterForm")
+    .addEventListener("submit", e => {
+
+        e.preventDefault();
+
+        const email =
+            document.getElementById("emailInput")
+                .value.trim();
+
+        if (!email) return;
+
+        localStorage.setItem(
+            "damitech_newsletter_email",
+            email
+        );
+
+        showToast("Thank you for subscribing!");
+
+        e.target.reset();
+
+    });
+
+
+/* ============================================================
+   BACK TO TOP
+============================================================ */
+
+const backTop =
+    document.getElementById("backTop");
+
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 500) {
+
+        backTop.classList.remove("hidden");
+
+    } else {
+
+        backTop.classList.add("hidden");
+
+    }
+
+});
+
+
+backTop.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+
+/* ============================================================
+   SCROLL REVEAL
+============================================================ */
+
+const observer =
+    new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: .12
+    });
+
+
+function observeReveals() {
+
+    document
+        .querySelectorAll(".reveal")
+        .forEach(el => observer.observe(el));
+
+}
+
+
+/* ============================================================
+   ESCAPE TEXT
+============================================================ */
+
+function escapeText(text) {
+
+    return text
+        .replace(/\\/g, "\\\\")
+        .replace(/'/g, "\\'")
+        .replace(/"/g, '\\"');
+
+}
+
+
+/* ============================================================
+   SCROLL TO SHOP
+============================================================ */
+
+function scrollToShop() {
+
+    document
+        .getElementById("shop")
+        .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+}
+
+
+/* ============================================================
+   KEYBOARD ACCESSIBILITY
+============================================================ */
+
+document.addEventListener("keydown", e => {
+
+    if (e.key === "Escape") {
+
+        closeCart();
+
+        closeModal("quickViewModal");
+        closeModal("orderModal");
+        closeModal("receiptModal");
+
+        document
+            .getElementById("mobileMenu")
+            .classList.remove("open");
+
+    }
+
+});
+
+
+/* ============================================================
+   INITIALIZE
+============================================================ */
+
+renderProducts(products);
+renderDeals();
+renderBestsellers();
+updateCartUI();
+observeReveals();
+
+
+/* ============================================================
+   MAKE CART ORDER CONFIRMATION AVAILABLE
+============================================================ */
+
+document
+    .getElementById("cartWhatsappBtn")
+    .addEventListener("dblclick", openOrderConfirmation);
+
+
+/*
+    Single click:
+    Direct WhatsApp cart order.
+
+    Double click:
+    Opens the order confirmation form
+    where the customer can generate a receipt.
+*/
+
+
+/* ============================================================
+   RECEIPT FROM CART HELPER
+============================================================ */
+
+function prepareReceiptFromCart() {
+
+    if (!cart.length) {
+
+        showToast("Your cart is empty");
+
+        return;
+
+    }
+
+    currentOrder =
+        cart.map(item => ({...item}));
+
+    renderOrderSummary();
+
+    openModal("orderModal");
+
+}
+
+
+/* ============================================================
+   OPTIONAL GLOBAL RECEIPT ACCESS
+============================================================ */
+
+window.prepareReceiptFromCart =
+    prepareReceiptFromCart;
+
+
+/* ============================================================
+   CLOSE MODALS WHEN CLICKING OUTSIDE
+============================================================ */
+
+document
+    .querySelectorAll(".modal-wrapper")
+    .forEach(modal => {
+
+        modal.addEventListener("click", e => {
+
+            if (e.target === modal) {
+
+                modal.classList.remove("show");
+
+            }
+
+        });
+
+    });
+
+
+/* ============================================================
+   AUTO-HIDE MOBILE SEARCH WHEN SCROLLING
+============================================================ */
+
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+
+    const current =
+        window.scrollY;
+
+    if (current > lastScroll && current > 120) {
+
+        // Deliberately lightweight:
+        // No aggressive UI changes.
+
+    }
+
+    lastScroll = current;
+
+});
+
+
+</script>
+
+</body>
+</html>
